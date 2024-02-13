@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashboardFullScreenContext" prefHeight="852" prefWidth="1313" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.School.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="950.0" fitWidth="1500.0" layoutX="-4.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/1053415.jpg" />
+         </image>
+         <effect>
+            <BoxBlur iterations="3" />
+         </effect>
+      </ImageView>
+      <AnchorPane fx:id="mainPane" layoutX="306.0" layoutY="116.0" prefHeight="744.0" prefWidth="1048.0">
+         <children>
+            <MediaView fx:id="mv" fitHeight="744.0" fitWidth="1048.0" opacity="0.78" preserveRatio="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="DashboardMainWindowContext" layoutX="28.0" layoutY="102.0" prefHeight="721.0" prefWidth="258.0" AnchorPane.bottomAnchor="91.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="749.0" layoutY="7.0" opacity="0.78" stroke="BLACK" strokeType="INSIDE" width="251.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Label fx:id="lblUserName1" layoutX="92.0" layoutY="64.0" prefHeight="31.0" prefWidth="133.0" text="User">
+               <font>
+                  <Font name="Britannic Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnStudent" layoutX="38.0" layoutY="175.0" mnemonicParsing="false" onAction="#StudentManageOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Student" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/student_male_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClass" layoutX="38.0" layoutY="254.0" mnemonicParsing="false" onAction="#SectionManageOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Class" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/google_classroom_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnHostal" layoutX="38.0" layoutY="333.0" mnemonicParsing="false" onAction="#HostalManageOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Hostal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/bunk_bed_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnExam" layoutX="38.0" layoutY="422.0" mnemonicParsing="false" onAction="#examOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Exam" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/exam_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnTeacher" layoutX="38.0" layoutY="507.0" mnemonicParsing="false" onAction="#TeacherManageOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Teacher" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/teacher_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSubject" layoutX="38.0" layoutY="597.0" mnemonicParsing="false" onAction="#SubjectManageOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-background-color: #c23616;" styleClass="button-one" text="Subject" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/physics_book_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="59.0" layoutY="33.0" text="Welcome">
+               <font>
+                  <Font name="Broadway" size="27.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="1374.0" layoutY="135.0" prefHeight="77.0" prefWidth="103.0" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="103.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Label fx:id="lblClass" layoutX="40.0" layoutY="42.0" text="00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="14.0" text="Class">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1373.0" layoutY="263.0" prefHeight="77.0" prefWidth="103.0" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" layoutY="4.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="103.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Label layoutX="10.0" layoutY="14.0" text="Students">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStudent" layoutX="36.0" layoutY="42.0" text="00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1374.0" layoutY="392.0" prefHeight="77.0" prefWidth="103.0" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="103.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Label fx:id="lblTeacher" layoutX="40.0" layoutY="42.0" text="00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="14.0" text="Teachers">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblDate" layoutX="1389.0" layoutY="20.0" prefHeight="19.0" prefWidth="73.0" text="2021-03-10" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1389.0" layoutY="39.0" prefHeight="19.0" prefWidth="73.0" text="10:33" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogout" alignment="BASELINE_LEFT" layoutX="1361.0" layoutY="898.0" mnemonicParsing="false" onAction="#logOutOnAction" prefHeight="30.0" prefWidth="103.0" style="-fx-background-radius: 5;" styleClass="button-four" text="LogOut">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnAddnewUser" alignment="BASELINE_LEFT" layoutX="1203.0" layoutY="901.0" mnemonicParsing="false" onAction="#addNewUserOnAction" prefHeight="30.0" prefWidth="143.0" style="-fx-background-radius: 5;" styleClass="button-four" text="Add New User">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/add-friend.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

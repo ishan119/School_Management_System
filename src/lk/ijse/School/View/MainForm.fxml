@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="852.0" prefWidth="1313.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.School.controller.MainFormController">
+   <children>
+      <StackPane fx:id="rootpane" prefHeight="852.0" prefWidth="1313.0">
+         <children>
+            <ImageView fitHeight="852.0" fitWidth="1313.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/6596307.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnStart" buttonType="RAISED" onAction="#Start" prefHeight="39.0" prefWidth="103.0" ripplerFill="BLACK" style="-fx-background-color: #FFC312#FFC312#FFC312;" text="Get Start" textOverrun="CLIP">
+               <font>
+                  <Font name="Sitka Text Bold" size="15.0" />
+               </font>
+               <effect>
+                  <Shadow />
+               </effect>
+            </JFXButton>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

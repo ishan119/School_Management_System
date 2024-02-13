@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="TeacherManagementContext" prefHeight="744.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.School.controller.TeacherManageFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="744.0" opacity="0.78" stroke="BLACK" strokeType="INSIDE" width="1048.0" />
+      <AnchorPane layoutX="54.0" layoutY="438.0" prefHeight="292.0" prefWidth="940.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TableView fx:id="tblTeacher" layoutX="20.0" layoutY="39.0" prefHeight="239.0" prefWidth="900.0" styleClass="table-view1">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="91.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="160.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="146.0" text="Address" />
+                  <TableColumn fx:id="colGender" prefWidth="166.0" text="Gender" />
+                  <TableColumn fx:id="colReligion" prefWidth="160.0" text="Religion" />
+                  <TableColumn fx:id="colContact" prefWidth="175.0" text="Contact" />
+              </columns>
+            </TableView>
+            <Label layoutX="20.0" layoutY="14.0" text="All Teachers">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="25.0" layoutY="14.0" text="Teacher Manage">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hypHome" layoutX="907.0" layoutY="9.0" onAction="#homeOnAction" text="Home" textFill="#1e1d1d" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="hypLogOut" layoutX="966.0" layoutY="9.0" onAction="#logOutOnAction" text="Logout" textFill="#1e1d1d" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="btnTeacher" layoutX="373.0" layoutY="21.0" onAction="#TeacherDetailsOnAction" text="Teacher details" underline="true" />
+      <TextField fx:id="txtTeacherFirstName" layoutX="68.0" layoutY="202.0" onKeyReleased="#textField_key_Released" prefHeight="26.0" prefWidth="248.0" promptText="Ayesh" styleClass="textPane" />
+      <Label layoutX="68.0" layoutY="180.0" text="Full Name*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="123.0" text="Teacher ID :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="187.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="246.0" text="Religion">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="68.0" layoutY="265.0" onKeyReleased="#textField_key_Released" prefHeight="26.0" prefWidth="248.0" promptText="123/A Colombo 7" styleClass="textPane" />
+      <Label layoutX="68.0" layoutY="246.0" text="Address*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="430.0" layoutY="148.0" onKeyReleased="#textField_key_Released" prefHeight="26.0" prefWidth="248.0" promptText="0782345323" styleClass="textPane" />
+      <Label layoutX="430.0" layoutY="132.0" text="Contact*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTeacherID" layoutX="70.0" layoutY="142.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextField fx:id="txtGender" layoutX="429.0" layoutY="206.0" onKeyReleased="#textField_key_Released" prefHeight="26.0" prefWidth="248.0" promptText="Gender" styleClass="textPane" />
+      <TextField fx:id="txtReligion" layoutX="429.0" layoutY="265.0" onKeyReleased="#textField_key_Released" prefHeight="26.0" prefWidth="248.0" promptText="Religion" styleClass="textPane" />
+      <JFXButton fx:id="savebtn" buttonType="RAISED" layoutX="640.0" layoutY="381.0" onAction="#teacherSaveOnAction" prefHeight="37.0" prefWidth="73.0" ripplerFill="BLACK" style="-fx-background-color: #3742fa;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="728.0" layoutY="381.0" onAction="#teacherSearchOnAction" prefHeight="37.0" prefWidth="73.0" ripplerFill="BLACK" style="-fx-background-color: #ffd32a#ffd32a;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateStudent" buttonType="RAISED" layoutX="818.0" layoutY="378.0" onAction="#teacherUpdateOnAction" prefHeight="37.0" prefWidth="90.0" ripplerFill="BLACK" style="-fx-background-color: #b33939#b33939;" text="Upadate" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteStudent" buttonType="RAISED" layoutX="924.0" layoutY="378.0" onAction="#teacherDeleteOnAction" prefHeight="37.0" prefWidth="73.0" ripplerFill="BLACK" style="-fx-background-color: #ff3838#ff3838;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
